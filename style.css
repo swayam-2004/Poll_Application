@@ -1,0 +1,156 @@
+body
+{
+ background-color: lightblue;
+ font-family: Arial, sans-serif;
+ margin:0;
+ padding: 0;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+}
+
+.container
+{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    animation: cardAnime 1s ease-in-out ;
+}
+
+@keyframes cardAnime {
+    0%
+    {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100%
+    {
+      transform: scale(1);
+      opacity: 1;
+    }
+}
+
+h1{
+    color: rgb(120, 238, 173);
+    font-size: 32px;
+    opacity: 1;
+}
+
+.poll
+{
+    margin-top: 20px;
+}
+
+h2{
+    color: rgb(107, 100, 102);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.options
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.option
+{
+    margin-bottom: 12px;
+}
+
+input[type="radio"]
+{
+    display: none;
+}
+
+label{
+    display: inline-block;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.option{
+    color:black;
+}
+
+.option:hover{
+    background-color: grey;
+}
+
+.option input[type="radio"]:checked+label
+{
+    background-color: grey;
+    color: black;
+    border-style: groove;
+}
+
+button{
+    background-color: rgb(248, 51, 51);
+    color:white;
+    padding: 10px 20px;
+    border:none;
+    margin-top:20px;
+    border-radius:5px;
+    cursor:pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover{
+    background-color: rgb(24, 24, 23);
+    color: rgb(235, 225, 225);
+}
+
+#result
+{
+    margin-top: 20px;
+    font-size: 20px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.option-result
+{
+    display: flex;
+    align-items:center;
+    margin-bottom: 10px;
+    width:100%;
+}
+.option-text
+{
+    flex:1;
+
+}
+
+.bar-container
+{
+    flex:3;
+    background-color: rgb(243, 235, 235);
+    height:10px;
+    margin-left:20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.bar{
+    height:100%;
+    background-color: rgb(165, 165, 204);
+    width:0;
+    transition: width 0.5s ease-in-out;
+}
+
+.percentage
+{
+    flex:1;
+    margin-left:10px;
+    font-weight: bold;
+    color:grey;
+}
